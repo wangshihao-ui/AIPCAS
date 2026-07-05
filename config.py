@@ -15,7 +15,7 @@ WINDOW_MIN_WIDTH = 1600
 WINDOW_MIN_HEIGHT = 950
 
 # ---- API 配置 (DeepSeek) ----
-API_KEY = "sk-8269350225b24d2dbedd32b617dc269d"
+API_KEY = "你自己的API key"
 API_BASE_URL = "https://api.deepseek.com"
 API_MODEL = "deepseek-v4-flash"
 
