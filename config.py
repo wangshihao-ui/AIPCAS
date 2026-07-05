@@ -14,7 +14,7 @@ BACKGROUND_IMAGE_PATH = os.path.join(BASE_DIR, "resources", "background.jpg")
 WINDOW_MIN_WIDTH = 1600
 WINDOW_MIN_HEIGHT = 950
 
-# ---- API 配置 (DeepSeek) ----
+# API 配置 (我这里选用的是DeepSeek) 
 API_KEY = "你自己的API key"
 API_BASE_URL = "https://api.deepseek.com"
 API_MODEL = "deepseek-v4-flash"
@@ -22,22 +22,22 @@ API_MODEL = "deepseek-v4-flash"
 # ---- 语音播报配置 (edge-tts) ----
 # 语音选项: zh-CN-XiaoxiaoNeural(晓晓), zh-CN-YunxiNeural(云希), zh-CN-YunyangNeural(云扬)
 TTS_VOICE = "zh-CN-XiaoxiaoNeural"
-TTS_RATE = "+0%"
+TTS_RATE = "+0%"  #(语音播报速度)
 
 # ---- 摄像头配置 ----
-CAMERA_DEVICE_1 = 21        # 摄像头1设备号（对应 /dev/video21）
-CAMERA_DEVICE_2 = 23        # 摄像头2设备号（对应 /dev/video23）
-CAMERA_WIDTH = 640          # 摄像头分辨率-宽（与模型输入一致，减少预处理开销）
+CAMERA_DEVICE_1 = 21        # 摄像头1设备号
+CAMERA_DEVICE_2 = 23        # 摄像头2设备号
+CAMERA_WIDTH = 640          # 摄像头分辨率-宽
 CAMERA_HEIGHT = 640         # 摄像头分辨率-高
-CAMERA_DEVICE = CAMERA_DEVICE_1  # 向后兼容（单路摄像头场景）
+CAMERA_DEVICE = CAMERA_DEVICE_1 
 
 # ---- YOLO 模型配置 (RKNN) ----
 YOLO_CONFIDENCE = 0.6
-YOLO_INPUT_SIZE = 640   # 模型输入分辨率（正方形边长）
+YOLO_INPUT_SIZE = 640   # 模型输入分辨率（正方形）
 
-# ---- 多模型配置 ----
+# 模型配置
 # key = 下拉框显示名称, value = {path, classes}
-# classes 必须与模型训练时的类别顺序完全一致
+# classes 与模型训练时的类别顺序完全一致
 MODEL_CONFIGS = {
     "水稻病害": {
         "path": os.path.join(BASE_DIR, "resources", "rice.rknn"),
@@ -65,8 +65,8 @@ MODEL_CONFIGS = {
     },
 }
 
-# ---- 土壤传感器配置 ----
-SOIL_SENSOR_PORT = "/dev/ttyUSB0"   # RS485 串口设备
+# 土壤传感器配置 
+SOIL_SENSOR_PORT = "/dev/ttyUSB0"   # 传感器串口设备
 SOIL_SENSOR_BAUD = 9600             # 波特率
 SOIL_SENSOR_ADDR = 1                # Modbus 设备地址
 SOIL_SENSOR_INTERVAL = 2.0          # 采样间隔(秒)
